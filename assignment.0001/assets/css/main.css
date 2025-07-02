@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+  /*  border: 3px solid whitesmoke;*/
+}
+html {
+    font-family: 'courier new', courier, monospace;
+    font-size: 16px;
+    height: 100%;
+}
+body {
+    color: whitesmoke;
+    min-height: 100%;
+    background-color: whitesmoke;
+    background-image: url(../imgs/pokemon.logo.svg);
+    background-size: 450px;
+    background-repeat: space;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+header {
+    width: 100%;
+    background-color: #606166;
+}
+main {
+    min-height: 100%;
+}
+footer {
+    background-color: #606166;
+    color: whitesmoke;
+    font-weight: bold;
+    margin-top: auto;
+    text-align: center;
+    width: 100%;
+}
+h1, h2, h3 {
+    padding: 5px;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav img {
+    padding: 10px;
+}
+nav ul {
+    list-style: none; /* remove style */
+    height: 100%;
+}
+nav ul li {
+    display: inline; /* display list in a row */
+    height: auto;
+    margin-right: 20px;
+}
+nav ul a {
+    color: whitesmoke;
+    font-weight: bold;
+    text-decoration: none; /* remove underline */
+}
+nav ul a:hover{
+    border-bottom: 3px solid whitesmoke;
+}
+nav ul li img {
+    height: 35px;
+}
+section ul {
+    list-style: none; /* remove style */
+    height: 100%;
+    padding: 5px;
+}
+section ul li {
+    height: auto;
+    margin-right: 20px;
+}
+table, tr, th, td, caption {
+    border: 5px solid #680095;
+    border-collapse: collapse;
+    padding: .25rem;
+}
+article {
+    display: flex;
+    justify-content: center;
+}
+fieldset {
+    padding: 15px;
+}
+textarea {
+    width: 90%;
+}
+button {
+    display: block;
+    margin-inline: auto;
+    margin-block: 10px;
+    padding: 5px;
+}
+p {
+    padding: 5px;
+}
+iframe {
+    width: 95%;
+}
+/* classes */
+.center {
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    width: 100%;
+}
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.event {
+    width: 300px;
+    margin-inline: auto;
+    margin-block: 15px;
+    border-radius: 15px;
+    border: 3px solid #680095 ;
+    /*background-color: #FFFFFF33;
+    backdrop-filter: blur(10px);*/
+    align-content: center;
+}
+.event img {
+    width: 95%;
+    border-radius: 15px;
+    padding-top: 10px;
+}
+.faq {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+.faq-item {
+    background-color: #FFFFFF33;
+    backdrop-filter: blur(10px);
+    border: 3px solid #680095;
+    border-radius: 15px;
+    margin-inline: auto;
+    margin-block: 20px;
+    width: 90%;
+}
+.faq-item-header {
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.faq-item-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+}
+.faq-item-header.active::after {
+    content: "\2212";
+}
+.faq-item-body {
+    /* display: none; */
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 3px solid #680095;
+    border-image: linear-gradient(to right, transparent, #680095, transparent) 1;
+}
+.faq-item-body.active + .faq-item-body {
+    display: block;
+}
+.logo {
+    margin-right: auto;
+    width: 150px;
+}
+.membership-table {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.menu-button {
+    display: none;
+}
+.Sabbath {
+    background: #FF000088;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.welcome{
+    background-color: #FFFFFF33;
+    backdrop-filter: blur(10px);
+    border: 3px solid #680095;
+    border-radius: 15px;
+    margin-inline: auto;
+    margin-block: 20px;
+    width: 90%;
+}
+/* media queries */
+@media screen and (max-width: 950px) {
+    table, th, td {
+	font-size: 75%;
+    }
+    table img {
+	zoom: 50%;
+    }
+    .hideOnMobile {
+	display: none;
+    }
+    .menu-button {
+	display: block;
+    }
+}
+@media screen and (max-width: 500px) {
+    table, th, td {
+	font-size: 65%;
+    }
+    table img {
+	zoom: 25%;
+    }
+    .hideOnMobile {
+	display: none;
+    }
+    .menu-button {
+	display: block;
+    }
+}
