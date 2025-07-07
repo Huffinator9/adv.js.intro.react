@@ -16,7 +16,7 @@ async function fetchPokemon() {
     try {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${input}`);
         if (!response.ok) {
-            throw new Error('Pokémon not found!');
+            throw new Error('Pokémon has not been discovered yet!');
         }
         const data = await response.json();
 
@@ -32,7 +32,7 @@ async function fetchPokemon() {
         // Show the card
         pokemonCard.style.display = 'block';
     } catch (error) {
-        errorMessage.textContent = 'Pokémon not found! Please check the name or ID.';
+        errorMessage.textContent = 'Pokémon has not been discovered yet! Please check the name or ID.';
         errorMessage.style.display = 'block';
     }
 }
