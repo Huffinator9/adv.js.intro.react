@@ -1,10 +1,11 @@
 * Introduction
 This is the primary repo for the Coding Temple Module _Advanced JavaScript and Introduction to React._
 
-* Assignment 0001 - PokeAPI Integration
+* Project - Fake Store App
 
 ** Objective:
-In this assignment, you will demonstrate your understanding of JavaScript Objects, the DOM, and asynchronous JavaScript by creating a simple web page that interacts with the PokeAPI to display basic Pokémon information. This exercise will help you practice fetching data from an API and dynamically updating the webpage.
+In this project, you will build a FakeStore E-Commerce App using React, React Router, and FakeStoreAPI. Your app will allow users to view, create, update, and delete products dynamically using API calls. This project reinforces state management, API interactions, React Router for navigation, and component-based architecture.
+
 
 ** Instructions:
 
