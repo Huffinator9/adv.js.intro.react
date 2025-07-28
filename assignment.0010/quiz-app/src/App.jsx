@@ -7,14 +7,14 @@ const categories = [
   { id: 11, name: 'Film' },
   { id: 12, name: 'Music' },
   { id: 15, name: 'Video Games' },
-  // Add more categories from https://opentdb.com/api_category.php
+  // additional categories available at 'https://opentdb.com/api_category.php'
 ];
 
 const difficulties = ['easy', 'medium', 'hard'];
 
 function App() {
   const [name, setName] = useState('');
-  const [category, setCategory] = useState(9); // Default to General Knowledge
+  const [category, setCategory] = useState(15); // Default to video games
   const [difficulty, setDifficulty] = useState('easy');
   const [question, setQuestion] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -86,7 +86,7 @@ function App() {
     <div className="app">
       {showWelcome ? (
         <div className="welcome">
-          <h2>Welcome to the Quiz</h2>
+          <h2>Welcome to the Newly Winged's Quiz App</h2>
           <form onSubmit={handleStartQuiz}>
             <div className="form-group">
               <label htmlFor="name">First Name:</label>
