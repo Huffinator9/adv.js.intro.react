@@ -8,6 +8,8 @@
 
 /* general */
 body {
+    min-height: 100vh;
+    color: whitesmoke;
     background-color: black;
     background-image: url(./assets/imgs/background.png);
     background-size: 450px;
