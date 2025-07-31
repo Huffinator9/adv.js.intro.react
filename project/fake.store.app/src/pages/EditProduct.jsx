@@ -51,13 +51,13 @@ function EditProduct() {
       });
 
       if (res.status === 200) {
-        setSuccessMessage('✅ Product updated successfully!');
+        setSuccessMessage('Product updated successfully!');
       } else {
-        setError('❌ Failed to update product.');
+        setError('Failed to update product.');
       }
     } catch (err) {
       console.error(err);
-      setError('❌ An error occurred while updating.');
+      setError('An error occurred while updating.');
     } finally {
       setSubmitting(false);
     }
@@ -73,7 +73,7 @@ function EditProduct() {
       navigate('/products');
     } catch (err) {
       console.error(err);
-      setError('❌ Failed to delete product.');
+      setError('Failed to delete product.');
     }
   };
 

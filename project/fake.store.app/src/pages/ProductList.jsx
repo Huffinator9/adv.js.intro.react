@@ -38,9 +38,9 @@ function ProductList() {
 				    <Card.Title>{product.title}</Card.Title>
 				    <Card.Text>${product.price}</Card.Text>
 				    <Link to={`/products/${product.id}`}>
-					<Button variant="outline-primary" size="md">View Details</Button>
+					<Button variant="outline-primary" size="md" className="m-3">View Details</Button>
 				    </Link>
-				    <Button variant="outline-success" size="md">Add to Cart</Button>
+				    <Button variant="outline-success" size="md" className="m-3">Add to Cart</Button>
 				</Card.Body>
 			    </Card>
 			</Col>

@@ -35,10 +35,32 @@ function ProductDetail() {
 	return (
 	    <Container className="text-center mt-5">
 		<p>Product not found.</p>
-		<Link to="/products"><Button variant="secondary">Back to Products</Button></Link>
+		<Link to="/products"><Button variant="outline-secondary">Back to Products</Button></Link>
 	    </Container>
 	);
     }
+
+  // Handle product delete
+  const handleDelete = async () => {
+    const confirm = window.confirm('Are you sure you want to delete this product?');
+    if (!confirm) return;
+
+    try {
+      await axios.delete(`https://fakestoreapi.com/products/${id}`);
+      navigate('/products');
+    } catch (err) {
+      console.error(err);
+      setError('Failed to delete product.');
+    }
+  };
+
+  if (loading) {
+    return (
+      <Container className="text-center mt-5">
+        <Spinner animation="border" />
+      </Container>
+    );
+  }
 
     return (
 	<Container className="mt-5">
@@ -51,9 +73,12 @@ function ProductDetail() {
 		    <h4 className="text-muted">${product.price}</h4>
 		    <p><strong>Category:</strong> {product.category}</p>
 		    <p>{product.description}</p>
-		    <Link to="/products"><Button variant="outline-primary"> Back to Products </Button></Link>
-		    <Button variant="outline-success"> Add to Cart </Button>
-		    <Link to={`/products/${product.id}/edit`}><Button variant="outline-warning"> Edit </Button></Link>
+		    <Link to="/products"><Button variant="outline-primary" className="m-3"> Back to Products </Button></Link>
+		    <Button variant="outline-success" className="m-3"> Add to Cart </Button>
+		    <Link to={`/products/${product.id}/edit`}><Button variant="outline-warning" className="m-3"> Edit </Button></Link>
+		    <Button variant="outline-danger" className="m-3" onClick={handleDelete}>
+			Delete Product
+		    </Button>
 		</Col>
 	    </Row>
 	</Container>
